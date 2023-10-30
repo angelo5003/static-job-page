@@ -1,11 +1,24 @@
 .card-outer-container {
+  display: flex;
+  justify-content: center;
+  margin: 3.12rem;
+}
+
+.card-container {
   width: 23.43rem;
+}
+
+.card-company-logo {
+  width: 50px;
 }
 
 .card-header-info,
 .card-job-details,
 .card-job-work-info {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 15.62rem;
+  padding: 0;
+  /* list-style: none; */
 }

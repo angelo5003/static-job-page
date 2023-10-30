@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 import jsonData from "./data/data.json";
 import JobCard from "./components/JobCard/JobCard";
 
@@ -8,7 +9,18 @@ function App() {
 
   return (
     <>
-      {Array.isArray(data) ? (
+      <div className="test">
+        {Array.isArray(data) ? (
+          // If there is data and the data is an array than map
+          data.map((jobData) => {
+            return <JobCard jobData={jobData} key={jobData.id} />;
+          })
+        ) : (
+          // if there is no data or the data is not an array than show this error
+          <div>Error: Oops there is no data to be shown</div>
+        )}
+      </div>
+      {/* {Array.isArray(data) ? (
         // If there is data and the data is an array than map
         data.map((jobData) => {
           return <JobCard jobData={jobData} key={jobData.id} />;
@@ -16,7 +28,7 @@ function App() {
       ) : (
         // if there is no data or the data is not an array than show this error
         <div>Error: Oops there is no data to be shown</div>
-      )}
+      )} */}
     </>
   );
 }
