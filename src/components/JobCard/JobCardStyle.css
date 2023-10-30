@@ -1,0 +1,11 @@
+.card-outer-container {
+  width: 23.43rem;
+}
+
+.card-header-info,
+.card-job-details,
+.card-job-work-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
