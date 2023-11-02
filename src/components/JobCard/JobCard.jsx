@@ -15,8 +15,8 @@ const JobCard = ({ jobData }) => {
         <section className="card-inner-container">
           <ul className="card-header-info">
             <li>{jobData.company}</li>
-            <li>{jobData.new}</li>
-            <li>{jobData.featured}</li>
+            <li>{jobData.new ? "new!".toUpperCase() : ""}</li>
+            <li>{jobData.featured ? "featured".toUpperCase() : ""}</li>
           </ul>
           <p>{jobData.position}</p>
           <ul className="card-job-details">
