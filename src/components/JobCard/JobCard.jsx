@@ -14,15 +14,19 @@ const JobCard = ({ jobData }) => {
         </div>
         <section className="card-inner-container">
           <ul className="card-header-info">
-            <li>{jobData.company}</li>
-            <li>{jobData.new ? "new!".toUpperCase() : ""}</li>
-            <li>{jobData.featured ? "featured".toUpperCase() : ""}</li>
+            <li className="card-company-name">{jobData.company}</li>
+            <li className={jobData.new ? "card-new-tag" : null}>
+              {jobData.new ? "new!".toUpperCase() : ""}
+            </li>
+            <li className={jobData.featured ? "card-featured-tag" : null}>
+              {jobData.featured ? "featured".toUpperCase() : ""}
+            </li>
           </ul>
-          <p>{jobData.position}</p>
+          <p className="card-job-position">{jobData.position}</p>
           <ul className="card-job-details">
-            <li>{jobData.postedAt}</li>
-            <li>{jobData.contract}</li>
-            <li>{jobData.location}</li>
+            <li className="job-details">{jobData.postedAt}</li>
+            <li className="job-details">{jobData.contract}</li>
+            <li className="job-details">{jobData.location}</li>
           </ul>
           <hr />
           <ul className="card-job-work-info">

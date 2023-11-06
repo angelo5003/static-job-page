@@ -26,3 +26,32 @@
 
   list-style: none;
 }
+
+.card-company-name {
+  color: hsl(180, 29%, 50%);
+  font-size: 1.1em;
+}
+
+.card-new-tag {
+  background-color: hsl(180, 29%, 50%);
+  padding: 0.75rem;
+  border-radius: 1.12rem;
+  color: hsl(180, 31%, 95%);
+}
+
+.card-featured-tag {
+  background-color: hsl(180, 14%, 20%);
+  padding: 0.75rem;
+  border-radius: 1.12rem;
+  color: hsl(180, 31%, 95%);
+}
+
+.card-job-position {
+  color: hsl(180, 14%, 20%);
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.job-details {
+  color: hsl(180, 3%, 70%);
+}
