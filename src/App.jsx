@@ -4,9 +4,10 @@ import jsonData from "./data/data.json";
 import JobCard from "./components/JobCard/JobCard";
 
 function App() {
-  const [data, setData] = useState(jsonData);
   const [selectedTags, setSelectedTags] = useState([]);
   console.log(`selectedTags items:`, selectedTags);
+
+  const data = jsonData;
 
   const handleSelectTags = (tag) => {
     // Check if the tag is already selected
@@ -19,6 +20,11 @@ function App() {
       // If it is not selected, add it to the selected tags array
       setSelectedTags([...selectedTags, tag]);
     }
+  };
+
+  // if function is triggerd, reset the state to an empty array
+  const handleRemoveAllTags = () => {
+    setSelectedTags([]);
   };
 
   const filteredJobs = data.filter((jobData) => {
@@ -57,7 +63,9 @@ function App() {
               })}
             </ul>
             <div className="button-container">
-              <button className="clear-btn">Clear</button>
+              <button className="clear-btn" onClick={handleRemoveAllTags}>
+                Clear
+              </button>
             </div>
           </section>
         ) : null}

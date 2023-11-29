@@ -35,6 +35,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
+  list-style-type: none;
 }
 
 .button-container {
@@ -50,6 +51,15 @@ body {
   background: none;
   font-size: 1.12em;
   color: #818a89;
+}
+
+.filter-items {
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  padding: 0.62rem;
+  font-size: 1.12em;
+  font-weight: 700;
+  border-radius: 0.31rem;
 }
 
 @media screen and (min-width: 23.5rem) {
