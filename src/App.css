@@ -20,6 +20,38 @@ body {
   height: 9.75rem;
 }
 
+.filter-container {
+  margin: 0 auto;
+  width: 18.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 0.31rem;
+  box-shadow: 0rem 0.62rem 0.31rem 0rem rgba(0, 0, 0, 0.15);
+}
+
+.filter-inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.31rem;
+}
+
+.clear-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.12em;
+  color: #818a89;
+}
+
 @media screen and (min-width: 23.5rem) {
   .header-background {
     background-image: url("/images/bg-header-desktop.svg");

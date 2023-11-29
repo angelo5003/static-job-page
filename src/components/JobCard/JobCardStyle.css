@@ -3,11 +3,13 @@
   .card-job-details,
   .card-job-work-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    width: 15.62rem;
+    width: 16rem;
     padding: 0;
     list-style: none;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
 

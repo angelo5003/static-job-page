@@ -6,6 +6,7 @@ import JobCard from "./components/JobCard/JobCard";
 function App() {
   const [data, setData] = useState(jsonData);
   const [selectedTags, setSelectedTags] = useState([]);
+  console.log(`selectedTags items:`, selectedTags);
 
   const handleSelectTags = (tag) => {
     // Check if the tag is already selected
@@ -22,7 +23,6 @@ function App() {
 
   const filteredJobs = data.filter((jobData) => {
     // Check if any of the selected tags are present in languages or tools or role or level
-    // if there is no math
     return (
       selectedTags.some(
         // Using the some method to iterate through selectedTags
@@ -45,7 +45,24 @@ function App() {
       </header>
 
       <div className="body-container">
-        {Array.isArray(data) ? (
+        {selectedTags.length > 0 ? (
+          <section className="filter-container">
+            <ul className="filter-inner-container">
+              {selectedTags.map((tag) => {
+                return (
+                  <li key={tag} className="filter-items">
+                    {tag}
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="button-container">
+              <button className="clear-btn">Clear</button>
+            </div>
+          </section>
+        ) : null}
+
+        {Array.isArray(filteredJobs) ? (
           // If there is data and the data is an array than map
           filteredJobs.map((jobData) => {
             return (
@@ -53,6 +70,7 @@ function App() {
                 jobData={jobData}
                 key={jobData.id}
                 handleSelectTag={handleSelectTags}
+                selectedTags={selectedTags}
               />
             );
           })
